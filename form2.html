@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border:5px solid black;
+            padding: 15px;
+            background-color: antiquewhite;
+            margin: 240px;
+            margin-left:500px;
+            margin-right:500px;
+        }
+        .s{
+           width: auto;
+           height: auto;
+        }
+        #button{
+            margin-left: 200px;
+            height: 30px;
+        }
+        #button:hover{
+            background-color: brown;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <form action="">
+        <h2 style="text-align:center">FORM 1</h2>
+        First Name: <br><input class="s" id="n" type="text" name="text"><br><br>
+        Password: <br><input class="s" id="p" type="password" name="password" required><br><br>
+        <button id="button">Submit</button>
+    </form>
+    <h1 id="test"></h1>
+    <script>
+        const a=confirm("Are you sure you want to continue?");
+        if(a){
+            const name=prompt("UserName:");
+            const pass=prompt("Password:");
+            document.getElementById("n").value=name;
+            document.getElementById("p").value=pass;
+        }
+        else{
+            document.getElementById("test").innerHTML="Cancelled";
+        }
+        var s=document.getElementById("button").innerHTML;
+        s.addEventListener("click",function(){
+            const a=alert("Login Successfull");
+        });
+        if(a){
+            document.getElementsByTagName("form").style.display="none";
+        }
+    </script>
+</div>
+</body>
+</html>
